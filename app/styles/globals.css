@@ -1,0 +1,67 @@
+@keyframes shine {
+  0% {
+    background-position: 0% center;
+  }
+  50% {
+    background-position: 100% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+/* Gold text effect class for reuse */
+.gold-gradient-text {
+  background: linear-gradient(
+    to right,
+    #b78628 0%,
+    #fcc201 15%,
+    #f8e187 25%,
+    #daaf08 35%,
+    #b78628 50%,
+    #fcc201 65%,
+    #f8e187 75%,
+    #daaf08 85%,
+    #b78628 100%
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s linear infinite;
+  display: inline-block;
+  text-shadow: 0 0 2px rgba(253, 224, 71, 0.2);
+}
+
+/* Lenis smooth scrolling styles */
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Hide all GSAP ScrollTrigger markers */
+.gsap-marker-scroller-start,
+.gsap-marker-scroller-end,
+.gsap-marker-start,
+.gsap-marker-end,
+.gsap-marker,
+[class*="gsap-marker"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+} 
